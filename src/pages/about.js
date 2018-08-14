@@ -18,16 +18,6 @@ const About = ({ data: { about } }) => (
           __html: about.bioNode.childMarkdownRemark.html
         }}
       />
-      <p className="sidebar__social">
-        {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
-          <a
-            key={profile.profileType}
-            href={profile.url}
-            target="blank"
-            className={`social social--${profile.profileType.toLowerCase()}`}
-          />
-        ))}
-      </p>
     </div>
   </article>
 );
