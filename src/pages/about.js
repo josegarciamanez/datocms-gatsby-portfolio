@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { HelmetDatoCms } from 'gatsby-source-datocms'
-import Img from 'gatsby-image'
+import React from "react";
+import Link from "gatsby-link";
+import { HelmetDatoCms } from "gatsby-source-datocms";
+import Img from "gatsby-image";
 
 const About = ({ data: { about } }) => (
   <article className="sheet">
@@ -15,14 +15,24 @@ const About = ({ data: { about } }) => (
       <div
         className="sheet__body"
         dangerouslySetInnerHTML={{
-          __html: about.bioNode.childMarkdownRemark.html,
+          __html: about.bioNode.childMarkdownRemark.html
         }}
       />
     </div>
+    <p>
+      {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
+        <a
+          key={profile.profileType}
+          href={profile.url}
+          target="blank"
+          className={`social social--${profile.profileType.toLowerCase()}`}
+        />
+      ))}
+    </p>
   </article>
-)
+);
 
-export default About
+export default About;
 
 export const query = graphql`
   query AboutQuery {
@@ -44,4 +54,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
