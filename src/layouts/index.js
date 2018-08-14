@@ -75,7 +75,7 @@ const TemplateWrapper = ({ children, data }) => (
               />
             ))}
           </p>
-          <div className="sidebar__copyright">{data.datoCmsHome.copyright}</div>
+
           <div className="mobile-header__logo">
             <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
           </div>
