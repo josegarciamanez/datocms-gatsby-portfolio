@@ -50,9 +50,32 @@ const TemplateWrapper = ({ children, data }) => (
     <div className="container__body">
       <div className="container__mobile-header">
         <div className="mobile-header">
-          <div className="mobile-header__menu">
+          {/* <div className="mobile-header__menu">
             <Link to="#" data-js="toggleSidebar" />
-          </div>
+          </div> */}
+          <ul className="sidebar__menu">
+            <li>
+              <Link to="/" activeClassName="active">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" activeClassName="active">
+                Sobre mi
+              </Link>
+            </li>
+          </ul>
+          <p className="sidebar__social">
+            {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
+              <a
+                key={profile.profileType}
+                href={profile.url}
+                target="blank"
+                className={`social social--${profile.profileType.toLowerCase()}`}
+              />
+            ))}
+          </p>
+          <div className="sidebar__copyright">{data.datoCmsHome.copyright}</div>
           <div className="mobile-header__logo">
             <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
           </div>
