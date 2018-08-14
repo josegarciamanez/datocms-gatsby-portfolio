@@ -25,12 +25,12 @@ const TemplateWrapper = ({ children, data }) => (
         <ul className="sidebar__menu">
           <li>
             <Link to="/" activeClassName="active">
-              Portfolio
+              PORTFOLIO
             </Link>
           </li>
           <li>
             <Link to="/about" activeClassName="active">
-              Sobre mi
+              CURRÍCULUM
             </Link>
           </li>
         </ul>
@@ -56,12 +56,12 @@ const TemplateWrapper = ({ children, data }) => (
           <ul className="sidebar__menu">
             <li>
               <Link to="/" activeClassName="active">
-                Portfolio
+                PORTFOLIO
               </Link>
             </li>
             <li>
               <Link to="/about" activeClassName="active">
-                Sobre mi
+                CURRÍCULUM
               </Link>
             </li>
           </ul>
