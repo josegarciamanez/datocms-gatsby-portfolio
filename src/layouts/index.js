@@ -24,12 +24,12 @@ const TemplateWrapper = ({ children, data }) => (
         />
         <ul className="sidebar__menu">
           <li>
-            <Link to="/">
+            <Link to="/" activeClassName="active">
               PORTFOLIO
             </Link>
           </li>
           <li>
-            <Link to="/about">
+            <Link to="/about" activeClassName="active">
               CURRÍCULUM
             </Link>
           </li>
