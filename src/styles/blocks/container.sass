@@ -1,4 +1,4 @@
-@media screen and (max-width: 899px)
+@media screen and (max-width: 359px)
   .container__sidebar
     box-sizing: border-box
     width: 200px
@@ -9,30 +9,22 @@
     bottom: 0
     left: 0
     z-index: 2
-    -moz-transform: translate3d(-200px, 0, 0)
-    -webkit-transform: translate3d(-200px, 0, 0)
     transform: translate3d(-200px, 0, 0)
     transition: transform 0.2s ease-in-out
     padding: 20px
     background-color: $light-bg-color
 
     .container.is-open &
-      -moz-transform: translate3d(0px, 0, 0);
-      -webkit-transform: translate3d(0px, 0, 0);
       transform: translate3d(0px, 0, 0);
 
   .container__body
-    -moz-transform: translate3d(0px, 0, 0)
-    -webkit-transform: translate3d(0px, 0, 0)
     transform: translate3d(0px, 0, 0)
     transition: transform 0.2s ease-in-out
 
     .container.is-open &
-      -moz-transform: translate3d(200px, 0, 0)
-      -webkit-transform: translate3d(200px, 0, 0)
       transform: translate3d(200px, 0, 0)
 
-@media screen and (min-width: 900px)
+@media screen and (min-width: 360px)
   .container
     display: flex
     padding: 0
