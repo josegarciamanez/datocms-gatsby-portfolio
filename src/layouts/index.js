@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children, data }) => (
         <div className="sidebar__copyright">{data.datoCmsHome.copyright}</div>
       </div>
     </div>
-    {/* <div className="container__body">
+    <div className="container__body">
       <div className="container__mobile-header">
         <div className="mobile-header">
           <div className="mobile-header__menu">
@@ -58,7 +58,7 @@ const TemplateWrapper = ({ children, data }) => (
         </div>
       </div>
       {children()}
-    </div> */}
+    </div>
   </div>
 );
 
