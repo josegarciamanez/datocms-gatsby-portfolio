@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import { HelmetDatoCms } from "gatsby-source-datocms";
-
 import "../styles/index.sass";
-
 const TemplateWrapper = ({ children, data }) => (
   <div className="container">
     <HelmetDatoCms
